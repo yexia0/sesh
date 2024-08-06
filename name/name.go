@@ -18,12 +18,12 @@ func convertToValidName(name string) string {
 func nameFromPath(result string) string {
 	name := ""
 	if path.IsAbs(result) {
-		gitName := nameFromGit(result)
-		if gitName != "" {
-			name = gitName
-		} else {
+		// gitName := nameFromGit(result)
+		// if gitName != "" {
+		// 	name = gitName
+		// } else {
 			name = filepath.Base(result)
-		}
+		// }
 	}
 	return name
 }
